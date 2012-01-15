@@ -501,9 +501,6 @@ class SG_NewsletterAPI {
 		curl_setopt ( $session, CURLOPT_ENCODING, 'gzip,deflate' );
 		curl_setopt ( $session, CURLOPT_TIMEOUT, self::TIMEOUT );
 		curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
-		
-		// Added 14 Jan 2012
-		curl_setopt($session, CURLOPT_SSL_VERIFYPEER, FALSE);
 
 		// obtain response
 		$jsonResponse = curl_exec($session);
